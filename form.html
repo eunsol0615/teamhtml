@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <style>
+    body {background-color: white; font-family: 'Segoe UI';}
+    .star-rating {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      display: inline-block;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      font-size: 2em;
+      color: #00397e;
+      cursor: pointer;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color:  #5d71b2;
+      transition: 0.3s ease;
+    }
+    h1 {text-align: center; color:  #00397e; margin-top: 10%;}
+    form {text-align: center;}
+    fieldset {width: fit-content; margin: auto; padding: 10px; border: 4px dashed #00397e;}
+    input[type=text] {font-family: 'PyeojinGothic-Bold'; font-weight: 700;}
+    textarea {font-family: 'PyeojinGothic-Bold'; font-weight: 700;}
+  </style>
+</head>
+<body>
+  <h1>Submit a Review</h1>
+  <form id="reviewForm">
+    <fieldset>
+      <legend style="color: #00397e;"><strong>Personal Information</strong></legend>
+        <input type="text" id="name" placeholder="Your name" required>
+          <br><br>
+        <select id="category">
+          <option value="performance">공연분과</option>
+          <option value="exhibition">전시분과</option>
+          <option value="religion">종교분과</option>
+          <option value="sport">체육분과</option>
+          <option value="academic">학술분과</option>
+          <option value="volunteer">봉사분과</option>
+          <option value="computer">전산분과</option>
+        </select><br>
+        <input type="text" id="club" placeholder="Club name" required>
+        <br><br>
+        <textarea id="review" placeholder="Your review" required rows="7" cols="22" style="resize: none;" ></textarea>
+          <br><br>
+
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+          <br><br>
+
+         <button type="submit" style="font-family: 'Segoe UI'; font-weight: 500;">Submit</button>
+    </fieldset>
+  </form>
+
+  <script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const category = document.getElementById('category').value;
+      const club = document.getElementById('club').value.trim();
+      const review = document.getElementById('review').value.trim();
+      const rating = document.querySelector('input[name="rating"]:checked');
+
+      if (name && review && rating && category && club) {
+        const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+
+
+        reviews.push({ name, review, rating: parseInt(rating.value), category, club });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        window.location.href = 'performing.html';
+      } else {
+        alert("Please fill in all fields and select a rating.");
+      }
+    });
+  </script>
+</body>
+</html>

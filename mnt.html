@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>뉴스 댓글</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .comment-section {
+      margin-top: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .comment-section h3 {
+      margin-bottom: 15px;
+    }
+
+    #commentInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #submitComment {
+      padding: 10px 20px;
+      background-color: #00397e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comment {
+      margin-top: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 이미지가 기사 내용 -->
+  <img src="0609010423526784.jpg" alt="뉴스 기사 이미지">
+
+  <!-- 댓글 섹션 -->
+  <div class="comment-section">
+    <h3>댓글</h3>
+    <input type="text" id="commentInput" placeholder="댓글을 입력하세요...">
+    <button id="submitComment">등록</button>
+    
+    <div id="commentList"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('commentInput');
+    const commentList = document.getElementById('commentList');
+    const submitComment = document.getElementById('submitComment');
+
+    submitComment.addEventListener('click', function() {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.textContent = commentText;
+        commentList.appendChild(commentDiv);
+        commentInput.value = '';
+      }
+    });
+  </script>
+
+</body>
+</html>

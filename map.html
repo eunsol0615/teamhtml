@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @font-face {
+    font-family: 'PyeojinGothic-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+    
+    body {
+      margin: 0;
+      font-family: 'PyeojinGothic-Bold';
+      background-color: #ffffff;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    #header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    #header img {
+      height: 100px;
+      width: auto;
+      max-width: 40vw;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #00397e;
+      border-radius: 40px;
+      padding: 10px 20px;
+    }
+
+    li {
+      flex: 1 1 auto;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    li a:hover {
+      background-color: #66b3ff;
+    }
+    #login{
+      background-color: #ffffff;
+      color:black;
+    }
+
+    img {
+      max-width: 100%; /* 부모 너비를 넘지 않게 */
+      height: auto;     /* 가로에 맞게 세로 비율 유지 */
+      display: block;
+      margin: 0 auto;   /* 수평 가운데 정렬 */
+    }
+    h1 {
+      text-align: center;
+      margin: 75px 0 100px 0;
+      font-size: 2.2rem;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="left">
+     <a href="index.html"><img src="handong-logo.png" alt="로고"></a>
+      
+    </div>
+    <div id="box">
+      <ul>
+        <li><a id="login" href="login.html">로그인</a></li>
+        <li><a href="specialphoto.html">탐색</a></li>
+        <li><a href="performance(gpt).html">동아리</a></li>
+        <li><a href="calender(gpt).html">일정</a></li>
+        <li><a href="map.html">지도</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1>동방 지도</h1>
+  <img src="IMG_1121.png" alt="동방 지도 이미지">
+  <script>
+  fetch("https://test2-c6nz.onrender.com")
+  .then(res => res.json())
+  .then(data => {
+    const div = document.createElement("div");
+    div.innerHTML = "<h2>예매 좌석 목록</h2><ul>" +
+      data.map(d => `<li>${d.user} → 좌석 ${d.seat}</li>`).join("") +
+      "</ul>";
+    document.body.appendChild(div);
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+   <style>
+    @font-face {
+  font-family: 'PyeojinGothic-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+    body {
+      margin: 0;
+      font-family:'PyeojinGothic-Bold' ;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    #header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    #header img {
+      height: 100px;
+      width: auto;
+      max-width: 40vw;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #00397e;
+      border-radius: 40px;
+      padding: 10px 20px;
+    }
+
+    li {
+      flex: 1 1 auto;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    li a:hover {
+      background-color: #66b3ff;
+    }
+    #login{
+      background-color: #ffffff;
+      color:black;
+    }
+
+    .main-image {
+      position: relative;
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 100px 0;
+      font-size: 2.2rem;
+      color: #00397e;
+    }
+       .ad-box2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 80px;
+      margin: 80px auto;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      font-family: 'Segoe UI', sans-serif;
+
+      background-color: #00397e;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .ad-box2:hover {
+      background-color: #0050b3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+    #calender {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 0 auto 100px;
+      max-width: 1200px;
+    }
+
+    .match,
+    .calendar-frame {
+      width: 500px;
+      height: 500px;
+      border-radius: 10px;
+    }
+
+    .match {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 자식 요소 수평 가운데 정렬 */
+  padding: 20px 0;
+  border-radius: 10px;
+}
+#match-box1,
+#match-box2 {
+  width: 100%;
+  max-width: 476px; /* 500px - 좌우 padding 12px*2 */
+  margin: 10px auto;
+  padding: 20px 12px;
+  background-color: #00397e;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+}
+
+
+.team {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.p-club {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+    .calendar-frame {
+      border: none;
+    }
+
+    .ad-box {
+      width: 970px;
+      max-width: 90%;
+      margin: 80px auto;
+      height: 120px;
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+      background-image: url(MBti.png);
+    }
+
+    .slider-container {
+      position: relative;
+      margin: 50px auto 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1400px;
+      gap: 30px;
+      padding: 0 40px;
+    }
+
+    .scroll-button {
+      padding: 15px;
+      background-color: #00397e;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+      height: 180px;
+      font-size: 1.5rem;
+    }
+
+    .video-grid,
+    .photo-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 30px;
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .video-item-wrapper,
+    .photo-grid-item {
+      scroll-snap-align: start;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 0 0 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .video-caption,
+    .photo-caption {
+      background-color: #f0f8ff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      background-color: #00397e;
+      padding: 50px;
+      text-align: center;
+      font-size: 1.3rem;
+      color: white;
+      margin-top: 80px;
+    }
+    span{
+        background-color: gold;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="left">
+      <img src="handong-logo.png" alt="로고">
+      
+    </div>
+    <div id="box">
+      <ul>
+        <li><a id="login" href="login.html">로그인</a></li>
+        <li><a href="specialphoto.html">탐색</a></li>
+        <li><a href="performance(gpt).html">동아리</a></li>
+        <li><a href="calender(gpt).html">일정</a></li>
+        <li><a href="map.html">지도</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-image">
+    <img src="find.png" class="slide active" alt="슬라이드1">
+    <img src="mnt.jpg" class="slide" alt="슬라이드2">
+    <img src="handong.png" width="125%" class="slide" alt="슬라이드3">
+  </div>
+
+  <h1 class="section-title">일정</h1>
+  <!-- 
+      동아리 포스터의 출처는 각 동아리 인스타입니다.
+    -->
+    <a href="ticket.html" class="ad-box2">Tickets</a>
+
+  <div id="calender">
+    <div class="match">
+  <h2> Upcoming match: <span>대학 농구 4강</span> </h2>
+
+  <div id="match-box1">
+    <!-- 
+      Image by Esteban Sequeira - https://www.flaticon.com/kr/free-icon/south-korea_15865782
+      Used with permission / Esteban Sequeira
+    -->
+    <div class="team">
+      <img src="free-icon-flag-14009804.png" width="80" height="60" alt="Team Korea Flag">
+      <h3>Team Korea</h3>
+    </div>
+
+    <hr style="width: 100%; border: 1px solid #ffffff99;">
+
+    <!-- 
+      Image by Enamo Studios - https://www.flaticon.com/kr/free-icon/japan_6211477
+      Used with permission / Enamo Studios
+    -->
+    <div class="team">
+      <img src="free-icon-japan-6211477.png" width="80" height="60" alt="Team Japan Flag">
+      <h3>Team Japan</h3>
+    </div> </div>
+    <h2>Upcoming Performance: <span>정기 공연</span> </h2>
+  <div id="match-box2">
+    <div class="p-club">
+      <img src="star.png" width="80" height="80" alt="Team Korea Flag">
+      <h3>한풍 동아리</h3>
+    </div>
+
+    
+  </div>
+</div>
+
+    <iframe class="calendar-frame" src="table.html"></iframe>
+  </div>
+
+  <a href="matchmaker.html"><div class="ad-box"></div></a>
+
+  <h1 class="section-title">Popular Videos</h1>
+  <div class="slider-container">
+    <button class="scroll-button" onclick="scrollSlider('video-grid', -1)">←</button>
+    <div class="video-grid" id="video-grid">
+      <div class="video-item-wrapper">
+        <div class="video-item"><iframe src="동영상1.mp4" allowfullscreen></iframe></div>
+        <div class="video-caption">오석 계단</div>
+      </div>
+      <div class="video-item-wrapper">
+        <div class="video-item"><iframe src="동영상2.mp4" allowfullscreen></iframe></div>
+        <div class="video-caption">오석 2층</div>
+      </div>
+      <div class="video-item-wrapper">
+        <div class="video-item"><iframe src="동영상3.mp4" allowfullscreen></iframe></div>
+        <div class="video-caption">열람실</div>
+      </div>
+    </div>
+    <button class="scroll-button" onclick="scrollSlider('video-grid', 1)">→</button>
+  </div>
+
+  <h1 class="section-title">Popular Photos</h1>
+  <div class="slider-container">
+    <button class="scroll-button" onclick="scrollSlider('photo-grid', -1)">←</button>
+    <div class="photo-grid" id="photo-grid">
+      <div class="photo-grid-item">
+        <img src="4.jpg" alt="사진1">
+        <div class="photo-caption">천마지</div>
+      </div>
+      <div class="photo-grid-item">
+        <img src="5.jpg" alt="사진2">
+        <div class="photo-caption">그레이스 스쿨 가는 길</div>
+      </div>
+      <div class="photo-grid-item">
+        <img src="6.jpg" alt="사진3">
+        <div class="photo-caption">그레이스 스쿨</div>
+      </div>
+      <div class="photo-grid-item">
+        <img src="7.jpg" alt="사진4">
+        <div class="photo-caption">벚꽃</div>
+      </div>
+    </div>
+    <button class="scroll-button" onclick="scrollSlider('photo-grid', 1)">→</button>
+  </div>
+
+  <div class="footer"></div>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+    setInterval(nextSlide, 5000);
+
+    function scrollSlider(id, direction) {
+      const container = document.getElementById(id);
+      container.scrollBy({ left: direction * 350, behavior: 'smooth' });
+    }
+  </script>
+  <script>
+    fetch("https://test2-c6nz.onrender.com", {
+  credentials: "include"
+})
+.then(res => res.json())
+.then(data => {
+  if (data.user) {
+    document.getElementById("login").innerText = `${data.user}님`;
+  }
+});
+
+  </script>
+</body>
+</html>
