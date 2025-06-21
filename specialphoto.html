@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update News</title>
+  <style>
+    @font-face {
+      font-family: 'PyeojinGothic-Bold';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+
+    body {
+      font-family: 'PyeojinGothic-Bold';
+      margin: 0;
+      background-color: #ffffff;
+      line-height: 1.6;
+      
+    }
+
+    #header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    #header img {
+      height: 100px;
+      width: auto;
+      max-width: 40vw;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #00397e;
+      border-radius: 40px;
+      padding: 10px 20px;
+    }
+
+    li {
+      flex: 1 1 auto;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    li a:hover {
+      background-color: #66b3ff;
+    }
+    #login{
+      background-color: #ffffff;
+      color:black;
+    }
+    .container-sp1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .leftarea {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .header2 {
+      text-align: center;
+    }
+
+    .header-item {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .item {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      flex-wrap: wrap;
+    }
+
+    .item:hover {
+      transform: translateY(-4px);
+    }
+
+    .item img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+    .item-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .item-content p {
+      margin: 0;
+      line-height: 1.6;
+      font-size: 1rem;
+      background-color: yellow;
+    }
+
+    .click {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap:15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .click div {
+      display: flex;
+      align-items: center;
+    }
+
+    .click img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .click span {
+      font-size: 0.9rem;
+      margin-left: 4px;
+      min-width: 20px;
+    }
+
+    .rightarea {
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-height: 300px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .rightarea h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .extra-box {
+      margin-top: 30px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+      min-height: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      .container-sp1 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .item {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .item img {
+        width: 100%;
+        height: auto;
+      }
+
+      .item-content {
+        padding: 15px;
+      }
+
+      .item-content p {
+        font-size: 0.95rem;
+      }
+
+      .extra-box {
+        font-size: 0.95rem;
+      }
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <div class="left">
+     <a href="index.html"><img src="handong-logo.png" alt="로고"></a>
+      
+    </div>
+    <div id="box">
+      <ul>
+        <li><a id="login" href="login.html">로그인</a></li>
+        <li><a href="specialphoto.html">탐색</a></li>
+        <li><a href="performance(gpt).html">동아리</a></li>
+        <li><a href="calender(gpt).html">일정</a></li>
+        <li><a href="map.html">지도</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 본문 -->
+  <div class="container-sp1">
+    <div class="leftarea">
+      <div class="header2">
+        <h2 class="header-item">Update News</h2>
+      </div>
+
+      <a href="mnt.html"><div class="item" data-title="MNT 소개 카드">
+        <div class="item-content">
+          <p>MNT가 뭐에요? <br> 쉽게 설명해 드립니다.</p>
+          <div class="click">
+            <div><img class="heart" src="heart.png" alt="좋아요" data-type="heart" data-title="MNT 소개 카드"><span>1</span></div>
+            <div><img class="star" src="star.png" alt="즐겨찾기" data-type="star" data-title="MNT 소개 카드"><span>1</span></div>
+          </div>
+        </div>
+        <img src="MNT 로고.png" alt="예시 이미지">
+      </div> </a><a href="news1.html"><div class="item" data-title="MNT 소개 카드">
+        <div class="item-content">
+          <p>내 안의 가능성을 깨운 시간 - <br>한동대 연극 동아리 ‘꾼들’</p>
+          <div class="click">
+            <div><img class="heart" src="heart.png" alt="좋아요" data-type="heart" data-title="MNT 소개 카드"><span>1</span></div>
+            <div><img class="star" src="star.png" alt="즐겨찾기" data-type="star" data-title="MNT 소개 카드"><span>1</span></div>
+          </div>
+        </div>
+        <img src="1.jpg" alt="예시 이미지">
+      </div> </a><a href="news2.html"><div class="item" data-title="MNT 소개 카드">
+        <div class="item-content">
+          <p>한동대학교 연극 동아리 ‘꾼들’,<br> 30년 전통의 무대를 잇다</p>
+          <div class="click">
+            <div><img class="heart" src="heart.png" alt="좋아요" data-type="heart" data-title="MNT 소개 카드"><span>1</span></div>
+            <div><img class="star" src="star.png" alt="즐겨찾기" data-type="star" data-title="MNT 소개 카드"><span>1</span></div>
+          </div>
+        </div>
+        <img src="2.jpg" alt="예시 이미지">
+      </div> </a>
+      <a href="new3.html"><div class="item" data-title="MNT 소개 카드">
+        <div class="item-content">
+          <p>한동대학교 수어 동아리 ‘소울’,<br> 청인과 농인을 잇다</p>
+          <div class="click">
+            <div><img class="heart" src="heart.png" alt="좋아요" data-type="heart" data-title="MNT 소개 카드"><span>1</span></div>
+            <div><img class="star" src="star.png" alt="즐겨찾기" data-type="star" data-title="MNT 소개 카드"><span>1</span></div>
+          </div>
+        </div>
+        <img src="3.jpg" alt="예시 이미지">
+      </div> </a>
+
+
+     <a href="news4.html"> <div class="item" data-title="새내기를 위한 동아리 소개">
+        <img src="학교.png" alt="예시 이미지">
+        <div class="item-content">
+          <p>To. 새내기<br>한동대학교 동아리를 소개합니다.</p>
+          <div class="click">
+            <div><img class="heart" src="heart.png" alt="좋아요" data-type="heart" data-title="새내기를 위한 동아리 소개"><span>1</span></div>
+            <div><img class="star" src="star.png" alt="즐겨찾기" data-type="star" data-title="새내기를 위한 동아리 소개"><span>1</span></div>
+          </div>
+        </div>
+      </div></a>
+    </div>
+
+    <div class="rightarea">
+      <h2>Ranking</h2>
+      <ol id="ranking-list" style="padding-left: 20px;"></ol>
+      <div class="extra-box" id="top-content-box">
+        가장 많이 클릭된 카드 내용이 여기에 표시됩니다.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('reset') === 'true') {
+      localStorage.clear();
+    }
+
+    const items = document.querySelectorAll('.item');
+    const rankingList = document.getElementById('ranking-list');
+    const topContentBox = document.getElementById('top-content-box');
+    const clickCounts = JSON.parse(localStorage.getItem('clickCounts')) || {};
+
+    items.forEach(item => {
+      const title = item.getAttribute('data-title');
+      if (!clickCounts[title]) clickCounts[title] = 0;
+
+      item.addEventListener('click', () => {
+        clickCounts[title]++;
+        localStorage.setItem('clickCounts', JSON.stringify(clickCounts));
+        updateRanking();
+      });
+    });
+
+    function updateRanking() {
+      const sorted = Object.entries(clickCounts)
+        .sort((a, b) => b[1] - a[1])
+        .filter(([_, count]) => count > 0);
+
+      rankingList.innerHTML = '';
+      sorted.forEach(([title, count]) => {
+        const li = document.createElement('li');
+        li.textContent = `${title} (${count}회 클릭됨)`;
+        rankingList.appendChild(li);
+      });
+
+      if (sorted.length > 0) {
+        const topTitle = sorted[0][0];
+        const topItem = [...items].find(item => item.getAttribute('data-title') === topTitle);
+        const paragraph = topItem.querySelector('p');
+        topContentBox.innerHTML = paragraph.innerHTML;
+      }
+    }
+
+    updateRanking();
+
+    const icons = document.querySelectorAll('.click img');
+    icons.forEach(icon => {
+      const key = `${icon.dataset.title}-${icon.dataset.type}`;
+      const span = icon.nextElementSibling;
+      const saved = localStorage.getItem(key);
+      if (saved !== null) {
+        span.textContent = saved;
+      }
+
+      icon.addEventListener('click', event => {
+        event.stopPropagation();
+        let count = parseInt(span.textContent);
+        count++;
+        span.textContent = count;
+        localStorage.setItem(key, count);
+      });
+    });
+  </script>
+
+</body>
+</html>
