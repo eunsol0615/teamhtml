@@ -103,11 +103,29 @@
     .then(res => res.json())
     .then(data => {
       if (data.success) {
-        alert("로그인 성공!");
-        window.location.href = "index.html"; // 로그인 성공 시 이동
-      } else {
-        alert("아이디 또는 비밀번호가 틀렸습니다.");
-      }
+  alert("로그인 성공!");
+
+  const reservedSeat = localStorage.getItem("selectedSeat");
+
+  if (reservedSeat) {
+    const seat = document.createElement("div");
+    seat.className = "seat reserved";
+    seat.textContent = reservedSeat;
+    seat.dataset.seat = reservedSeat;
+
+    seatMap.appendChild(seat);
+    seatMap.style.display = "flex";
+  } else {
+    alert("예매된 좌석이 없습니다.");
+  }
+
+  // 로그인 폼 감추기
+  document.querySelector(".login-container").style.display = "none";
+
+  // ✅ 메인 페이지로 이동
+  window.location.href = "main.html"; // 원하는 페이지로 경로 수정
+}
+
     });
   });
  
