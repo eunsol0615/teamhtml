@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>체육분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/chayo.png" alt="CHAYOCHAYO"></td>
+            <td colspan="2"><p class="title">차요차요 </p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 없음 </td>
+            <td width="25%">정모시간: 월, 목 20시~22시 </td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼</td>
+            <td>모집기간: ~3월 17일 </td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+관중석을 넘어서 필드로~! 
+
+<br><br>2018년에 창단된 한동 유일의 여자 풋살 동아리 
+
+<br><br>FC 차요차요는 매주 월요일과 목요일 오후 8시부터 10시까지 정기모임을 진행하고 있습니다. 정기 모임 시간에는 패스, 드리블, 슈팅 등 기본적인 훈련과 훈련한 내용들을 적용할 수 있는 실전 경기를 진행합니다. 또한, 한 학기 동안 훈련한 내용을 바탕으로 매 학기 외부 풋살팀(FC다이제, FC헤이데이 등)과의 교류전을 통해 경험과 실력을 쌓으며 활발한 활동을 이어가고 있습니다! 
+
+<br><br>FC 차요차요는 선수들 간, 선수와 코치님들 간의 친목을 중요하게 생각하며 매 학기 새로 들어오는 신입 기수들에 대한 내리사랑이 넘치는 동아리입니다! 또한, 잘 차는 것뿐 아니라 잘 먹고 잘 노는 동아리로 랜덤 밥, 차요 CC, 차요 체육대회, 차요 하계/동계 캠프 등을 진행하며 즐겁고 화목한 분위기 속에서 동아리 활동을 이어가고 있습니다 :) 
+
+<br><br>저희와 함께 즐겁게 공차고 싶으신 분들을 환영합니다! 
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

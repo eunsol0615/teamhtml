@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>체육분과 </title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/grandslam.png" alt="GrandSlam"></td>
+            <td colspan="2"><p class="title">그랜드슬램 </p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 없음 </td>
+            <td width="25%">정모시간: 수요일 20시 </td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼</td>
+            <td>모집기간: ~3월 17일 </td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.instagram.com/grandslam_hgu?utm_source=ig_web_button_share_sheet&igsh=MWdmaDd4YzFkdTNhMw==" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+테니스를 치고 싶은 한동인들이 언제든 자유롭게 치는 것을 목표로 하여 2004년도에 정식동아리로 인정되어 현재까지 활동을 이어나가고 있습니다. 
+
+<br><br>매주 수요일 저녁에 동아리 정모시간을 가져 테니스 실력을 키우고 동아리원들끼리 친해지는 시간을 가집니다. 또 테니스 초보자들을 위해 동아리 내의 훈련부장들이 추가적인 훈련도 진행합니다. 
+
+ <br><br>포항공대와 교류전, 졸업생과 재학생들 간의 교류전, 대학 테니스 대회 참가 등 다양한 활동을 하고 있으며 한동대학교 동문이신 서덕수 교수님의 지도 아래에 있습니다. 
+
+<br><br>테니스 실력과 관계없이 꾸준히 연습하고 열정 있게 테니스를 치고 싶은 한동인 누구나 환영합니다. 
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>
