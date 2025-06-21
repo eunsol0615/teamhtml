@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한동대학교 동아리 소개합니다</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00397e;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border-left: 5px solid #00397e;
+    }
+
+    strong {
+      color: #00397e;
+    }
+
+    .comment-section {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .comment-section h3 {
+      margin-bottom: 15px;
+    }
+
+    #commentInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #submitComment {
+      padding: 10px 20px;
+      background-color: #00397e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comment {
+      margin-top: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>한동대학교 동아리 소개합니다</h1>
+
+    <blockquote>“동아리 활동은 또 하나의 대학생활입니다.”</blockquote>
+
+    <p>한동대학교는 다양한 동아리 활동을 통해 학생들이 자신만의 관심사를 발견하고, 공동체 속에서 성장할 수 있도록 돕고 있습니다. 학문, 예술, 체육, 봉사 등 여러 분야의 자율적인 모임들이 활발히 운영되고 있으며, 학생들은 동아리를 통해 협업과 리더십, 창의적인 사고를 자연스럽게 배우게 됩니다.</p>
+
+    <p>새내기부터 졸업을 앞둔 선배들까지, 동아리는 모두에게 열려 있는 공간입니다. 동아리를 통해 처음 만나 친구가 되고, 함께 울고 웃으며 만들어 가는 시간은 캠퍼스 안에서 가장 빛나는 추억이 되곤 합니다.</p>
+
+    <p>한 학생은 이렇게 말합니다.</p>
+
+    <blockquote>“수업이 끝난 후 동아리방으로 향하는 길, 그게 제 하루 중 가장 설레는 시간이었어요.”</blockquote>
+
+    <p>당신도 지금, 무언가를 함께 만들고 싶은 마음이 있다면 동아리 문을 두드려 보세요. 그곳엔 당신을 기다리는 새로운 이야기와 사람들이 있습니다.</p>
+  </div>
+
+  <div class="comment-section">
+    <h3>댓글</h3>
+    <input type="text" id="commentInput" placeholder="댓글을 입력하세요...">
+    <button id="submitComment">등록</button>
+    <div id="commentList"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('commentInput');
+    const commentList = document.getElementById('commentList');
+    const submitComment = document.getElementById('submitComment');
+
+    submitComment.addEventListener('click', function () {
+      const commentText = commentInput.value.trim();

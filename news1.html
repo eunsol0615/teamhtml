@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 안의 가능성을 깨운 시간 - 한동대 연극 동아리 ‘꾼들’</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00397e;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border-left: 5px solid #00397e;
+    }
+
+    strong {
+      color: #00397e;
+    }
+
+    .comment-section {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .comment-section h3 {
+      margin-bottom: 15px;
+    }
+
+    #commentInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #submitComment {
+      padding: 10px 20px;
+      background-color: #00397e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comment {
+      margin-top: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>“내 안의 가능성을 깨운 시간”</h1>
+    <p><strong>한동대 연극 동아리 ‘꾼들’, 사람들의 마음을 울리다</strong></p>
+
+    <blockquote>“무대 위에서의 떨림, 그리고 커튼콜의 벅참은 평생 잊지 못할 경험이었습니다.”</blockquote>
+    <p>한동대학교의 대표 연극 동아리 ‘꾼들’에 참여한 김서윤(경영경제학부 23) 씨는 이렇게 말했다. 연극을 해본 적 없던 그녀는 호기심 반, 두려움 반으로 ‘꾼들’에 발을 들였지만, 몇 개월간의 준비와 공연을 통해 이전과는 전혀 다른 자신을 마주하게 됐다.</p>
+
+    <blockquote>“처음엔 대사 한 줄조차 떨면서 읽었는데, 연출팀과 배우팀의 따뜻한 지도와 격려 덕분에 점점 자신감을 얻을 수 있었어요. 서로의 차이를 존중하고 진심으로 응원하는 분위기 덕분에 성장할 수 있었던 것 같아요.”</blockquote>
+
+    <p>김 씨의 이야기처럼 ‘꾼들’은 연극을 처음 접하는 학생에게도 열린 공간이다. 무대에 오르는 배우뿐 아니라, 그 뒤를 받쳐주는 무대팀, 미술팀, 홍보마케팅팀까지 모두가 각자의 자리에서 책임과 열정을 다한다. 특히 무대 설치부터 조명, 의상, 영상까지 학생들이 직접 만들어가는 과정은 협업의 진정한 의미를 경험하게 한다.</p>
+
+    <blockquote>연출로 참여한 박진호(법학부 24) 씨는 “각자의 개성이 모여 하나의 이야기를 만드는 과정이 정말 짜릿했어요. 생각의 차이도 많았지만, 그걸 맞춰가는 과정에서 진짜 팀워크가 생기더라고요.”</blockquote>
+
+    <p>하나의 작품이 완성되기까지 몇 달간 이어지는 연습과 준비는 결코 쉽지 않다. 하지만 꾼들은 “고생보다 더 큰 보람을 얻는 시간”이라 말한다. 리허설이 끝난 뒤 텅 빈 무대를 바라보며 울컥했던 기억, 커튼콜에서 쏟아지는 박수에 눈물을 참았던 순간들. 그 모두가 ‘꾼들’이기에 가능한 장면들이다.</p>
+
+    <blockquote>“이제 무대가 제게는 또 다른 삶의 학교예요. 함께 땀 흘린 친구들이 있어 가능했죠.”</blockquote>
+
+    <p>‘꾼들’에서의 경험은 단순한 연극 활동을 넘어, 삶을 풍요롭게 하는 기억으로 학생들의 마음에 남아 있다.</p>
+  </div>
+
+  <div class="comment-section">
+    <h3>댓글</h3>
+    <input type="text" id="commentInput" placeholder="댓글을 입력하세요...">
+    <button id="submitComment">등록</button>
+    <div id="commentList"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('commentInput');
+    const commentList = document.getElementById('commentList');
+    const submitComment = document.getElementById('submitComment');
+
+    submitComment.addEventListener('click', function () {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.textContent = commentText;
+        commentList.appendChild(commentDiv);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

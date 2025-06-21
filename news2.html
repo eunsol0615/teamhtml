@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한동대학교 연극 동아리 ‘꾼들’, 30년 전통의 무대를 잇다</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00397e;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border-left: 5px solid #00397e;
+    }
+
+    strong {
+      color: #00397e;
+    }
+
+    .comment-section {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .comment-section h3 {
+      margin-bottom: 15px;
+    }
+
+    #commentInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #submitComment {
+      padding: 10px 20px;
+      background-color: #00397e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .comment {
+      margin-top: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>한동대학교 연극 동아리 ‘꾼들’, 30년 전통의 무대를 잇다</h1>
+
+    <blockquote>“당신은 어떤 ‘꾼’인가요?” 다양한 재능과 열정이 모이는 연극 공동체</blockquote>
+
+    <p>1995년 한동대학교 개교와 함께 첫 막을 올린 연극 동아리 ‘꾼들’이 30년 가까이 캠퍼스 문화의 중심을 지키며 그 존재감을 이어가고 있다.</p>
+
+    <p><strong>‘꾼들’</strong>은 단순한 연극 동아리를 넘어, 연출과 연기, 무대 제작, 시각 예술, 홍보 등 다양한 분야의 인재들이 모여 하나의 무대를 완성하는 창의적이고 유기적인 공동체다. 이들은 연극 한 편을 위해 각자 맡은 자리에서 최선을 다하며, 조화를 이루는 과정 속에서 깊은 팀워크를 만들어낸다.</p>
+
+    <p>배우와 연출팀은 캐릭터를 생생히 표현하기 위해 치밀한 해석과 감정을 담아내고, 무대팀은 무대의 구조부터 조명, 음향까지 연극의 분위기를 완성한다. 미술팀은 포스터 디자인은 물론 메이크업과 헤어, 티켓 디자인과 영상 제작까지 아우르며 작품의 시각적 완성도를 높이고, 홍보마케팅팀은 시드머니 확보부터 관객 유치, 외부 홍보에 이르기까지 꾼들의 연극 전반을 알리는 데 중요한 역할을 맡고 있다.</p>
+
+    <p>이처럼 꾼들은 다양한 역할과 배경을 가진 학생들이 모여 서로를 존중하며, 어려움 속에서도 함께 해결책을 찾아가는 경험을 통해 내면의 성장을 이끌어낸다. 연극이라는 매개를 통해 자신을 표현하고, 동시에 타인을 이해하는 법을 배우는 꾼들의 이야기는 많은 이들에게 감동을 전하고 있다.</p>
+
+    <blockquote>‘꾼들’은 묻는다. “당신은 어떤 ‘꾼’인가요?”</blockquote>
+
+    <p>다양한 색깔을 지닌 꾼들이 모여 무대 위에 펼치는 이야기는 오늘도 한동대학교 안팎에 울림을 전하고 있다.</p>
+  </div>
+
+  <div class="comment-section">
+    <h3>댓글</h3>
+    <input type="text" id="commentInput" placeholder="댓글을 입력하세요...">
+    <button id="submitComment">등록</button>
+    <div id="commentList"></div>
+  </div>
+
+  <script>
+    const commentInput = document.getElementById('commentInput');
+    const commentList = document.getElementById('commentList');
+    const submitComment = document.getElementById('submitComment');
+
+    submitComment.addEventListener('click', function () {
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.textContent = commentText;
+        commentList.appendChild(commentDiv);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
