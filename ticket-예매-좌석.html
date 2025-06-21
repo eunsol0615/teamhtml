@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>무대 구역 좌석</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .section-title {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+      background-color: #00397e;
+    }
+
+    .iframe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    iframe {
+      flex: 1 1 300px;
+      min-width: 280px;
+      max-width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        flex: 1 1 100%;
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="section-title">무대</h1>
+
+  <div class="iframe-container">
+    <iframe src="a구역.html"></iframe>
+    <iframe src="b구역.html"></iframe>
+    <iframe src="c구역.html"></iframe>
+  </div>
+
+</body>
+</html>
