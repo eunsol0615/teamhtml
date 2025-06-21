@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공연 동아리</title>
+  <style>
+    @font-face {
+      font-family: 'PyeojinGothic-Bold';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'PyeojinGothic-Bold';
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    #header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    #header img {
+      height: 100px;
+      width: auto;
+      max-width: 40vw;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #00397e;
+      border-radius: 40px;
+      padding: 10px 20px;
+    }
+
+    li {
+      flex: 1 1 auto;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    li a:hover {
+      background-color: #66b3ff;
+    }
+    #login{
+      background-color: #ffffff;
+      color:black;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 100px 0 100px 0;
+      font-size: 2rem;
+      color: #003366;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+
+    .search-box input {
+      width: 250px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #3399ff;
+      border-radius: 5px;
+    }
+
+    .search-box button {
+      padding: 10px 16px;
+      background-color: #3399ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background-color: #66b3ff;
+    }
+
+    .club-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .club-box {
+      flex: 1 1 260px;
+      max-width: 300px;
+      background-color: #00397e;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    .club-box img {
+      width: 90px;
+      height: 90px;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .text a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .club-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .club-box img {
+        margin: 0 0 10px 0;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <div class="left">
+     <a href="index.html"><img src="handong-logo.png" alt="로고"></a>
+      
+    </div>
+    <div id="box">
+      <ul>
+        <li><a id="login" href="login.html">로그인</a></li>
+        <li><a href="specialphoto.html">탐색</a></li>
+        <li><a href="performance(gpt).html">동아리</a></li>
+        <li><a href="calender(gpt).html">일정</a></li>
+        <li><a href="map.html">지도</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1>동아리</h1>
+  <!-- 
+      Image by Michelle Bilder - https://www.iconfinder.com/icons/9004759/star_favorite_award_like_icon
+      Used with permission / Michelle Bilder
+    -->
+      <!-- 
+      동아리 로고의 출처는 각 동아리 인스타입니다.
+    -->
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="동아리 이름이나 키워드를 검색하세요" />
+    <button id="searchButton">검색</button>
+  </div>
+
+  <div class="club-container">
+    <div class="club-box">
+      <img src="amission.png" alt="꾼들" />
+      <div class="text"><a href="공연) Ammission.html">Ammission</a><br>#힙합</div>
+    </div>
+    <div class="club-box">
+      <img src="amazing.png" alt="꾼들" />
+      <div class="text"><a href="공연) Amazing Story.html">Amazing story</a><br>#연극</div>
+    </div>
+    <div class="club-box">
+      <img src="GO.png" alt="꾼들" />
+      <div class="text"><a href="공연) GO.html">NEO</a><br>#춤 #댄스</div>
+    </div>
+    <div class="club-box">
+      <img src="liquid.png" alt="꾼들" />
+      <div class="text"><a href="공연) Liquid.html">Liquid</a><br>#밴드</div>
+    </div>
+    <div class="club-box">
+      <img src="MIC.png" alt="꾼들" />
+      <div class="text"><a href="공연) MIC.html">GO</a><br>#춤</div>
+    </div>
+    <div class="club-box">
+      <img src="mir.png" alt="꾼들" />
+      <div class="text"><a href="공연) Mir.html">Mir</a><br>#밴드</div>
+    </div>
+    <div class="club-box">
+      <img src="neo.png" alt="꾼들" />
+      <div class="text"><a href="공연) NEO.html">NEO</a><br>#작사 #작곡</div>
+    </div>
+    <div class="club-box">
+      <img src="reverie.png" alt="꾼들" />
+      <div class="text"><a href="공연) Reverie.html">Reverie</a><br>#클래식기타</div>
+    </div>
+    <div class="club-box">
+      <img src="지지.png" alt="꾼들" />
+      <div class="text"><a href="공연) ZIZZY.html">ZIZZY</a><br>#춤</div>
+    </div>
+    <div class="club-box">
+      <img src="godfel.png" alt="꾼들" />
+      <div class="text"><a href="공연) 갓스펠로우.html">갓스펠로우</a><br>#힙합</div>
+    </div>
+    <div class="club-box">
+      <img src="kkundle.png" alt="꾼들" />
+      <div class="text"><a href="공연) 꾼들.html">꾼들</a><br>#연극 #연기</div>
+    </div>
+    <div class="club-box">
+      <img src="soul.png" alt="꾼들" />
+      <div class="text"><a href="공연) 소울.html">소울</a><br>#수어 </div>
+    </div>
+    <div class="club-box">
+      <img src="orchestra.png" alt="꾼들" />
+      <div class="text"><a href="공연) 오케스트라.html">오케스트라</a><br>#악기 #하모니</div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="공연) 응원단.html">응원단</a><br>#치어리딩</div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="공연) 즉새두.html">즉새두</a><br>#재즈</div>
+    </div>
+    <div class="club-box">
+      <img src="pitchpipe.png" alt="꾼들" />
+      <div class="text"><a href="공연) 피치파이프.html">피치파이브</a><br>#중창 #보컬</div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="공연) 하향.html">하향</a><br>#춤 #무용</div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="공연) 한풍.html">한풍</a><br>#전통 </div>
+    </div>
+    <div class="club-box">
+      <img src="lamp.png" alt="꾼들" />
+      <div class="text"><a href="봉사) LAMP.html">LAMP</a><br>#봉사 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="봉사) 자유학교.html">자유학교</a><br>#봉사 #청소년 </div>
+    </div>
+    <div class="club-box">
+      <img src="palette.png" alt="꾼들" />
+      <div class="text"><a href="봉사) 팔레트.html">팔레트</a><br>#봉사 #벽화 </div>
+    </div>
+    <div class="club-box">
+      <img src="peace.png" alt="꾼들" />
+      <div class="text"><a href="봉사) 피스메이커.html">피스메이커</a><br>#봉사</div>
+    </div>
+    <div class="club-box">
+      <img src="cra.png" alt="꾼들" />
+      <div class="text"><a href="전산) CRA.html">CRA</a><br>#전산 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="전산) 슬기짜기.html">슬기짜기</a><br>#전산 </div>
+    </div><div class="club-box">
+      <img src="canvas.png" alt="꾼들" />
+      <div class="text"><a href="전시) CANVAS.html">CANVAS</a><br>#전시 </div>
+    </div><div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="전시) HAC.html">HAC</a><br>#전시 </div>
+    </div><div class="club-box">
+      <img src="vam.png" alt="꾼들" />
+      <div class="text"><a href="전시) VAM.html">VAM</a><br>#전시 </div>
+    </div><div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="종교) B2B.html">B2B</a><br>#종교</div>
+    </div><div class="club-box">
+      <img src="CCC.png" alt="꾼들" />
+      <div class="text"><a href="종교) CCC.html">CCC</a><br>#종교 </div>
+    </div><div class="club-box">
+      <img src="SFC.png" alt="꾼들" />
+      <div class="text"><a href="종교) SFC.html">SFC</a><br>#종교 </div>
+    </div>
+    <div class="club-box">
+      <img src="Ore.png" alt="꾼들" />
+      <div class="text"><a href="종교) 오르.html">한풍</a><br>#종교 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) H.MILAN.html">H.MILAN</a><br>#축구 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) Hoops.html">Hoops</a><br>#농구 </div>
+    </div>
+    <div class="club-box">
+      <img src="grandslam.png" alt="꾼들" />
+      <div class="text"><a href="체육) 그랜드슬램.html">그랜드슬램</a><br>#테니스 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) 덜지니어스.html">덜지니어스</a><br>#보드게임 </div>
+    </div>
+    <div class="club-box">
+      <img src="samson.png" alt="꾼들" />
+      <div class="text"><a href="체육) 삼손.html">삼손</a><br>#헬스 </div>
+    </div>
+    <div class="club-box">
+      <img src="sweep.png" alt="꾼들" />
+      <div class="text"><a href="체육) 스윕.html">스윕</a><br>#주짓수 </div>
+    </div>
+    <div class="club-box">
+      <img src="chayo.png" alt="꾼들" />
+      <div class="text"><a href="체육) 차요차요.html">차요차요</a><br>#축구 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) 천풍해세.html">천풍해세</a><br>#태권도 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) 한검.html">한검</a><br>#검도 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) 한마지로.html">한마지로</a><br>#유도 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="체육) 한방 스윙스.html">한방 스윙스</a><br>#야구 </div>
+    </div>
+    <div class="club-box">
+      <img src="holyrams.png" alt="꾼들" />
+      <div class="text"><a href="체육) 홀리램스.html">홀리램스</a><br>#미식축구 </div>
+    </div>
+    <div class="club-box">
+      <img src="dudus.png" alt="꾼들" />
+      <div class="text"><a href="학술) DUDUS.html">DUDUS</a><br>#창조과학 </div>
+    </div>
+    <div class="club-box">
+      <img src="star.png" alt="꾼들" />
+      <div class="text"><a href="학술) 펜통.html">펜통</a><br>#문예창작 </div>
+    </div>
+
+
+
+    
+     
+    
+    
+  </div>
+
+  <script>
+    document.getElementById('searchButton').addEventListener('click', function () {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const boxes = document.querySelectorAll('.club-box');
+
+      boxes.forEach(box => {
+        const text = box.innerText.toLowerCase();
+        box.style.display = text.includes(query) ? 'flex' : 'none';
+      });
+    });
+
+    window.addEventListener('pageshow', function () {
+      const boxes = document.querySelectorAll('.club-box');
+      boxes.forEach(box => box.style.display = 'flex');
+      document.getElementById('searchInput').value = '';
+    });
+  </script>
+
+</body>
+</html>
