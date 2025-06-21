@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/하향.png" alt="하향"></td>
+            <td colspan="2"><p class="title">하향</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 월~목요일 19시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@hahyang8922" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/hahyang_hgu/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    "고운 것도 거짓되고 아름다운 것도 헛되나 오직 여호와를 경외하는 여자는 칭찬을 받을 것이라" [잠언 31장 30절]<br><br>
+    한국무용을 통해 하나님께 예배 드리는 동아리, 하향은 하늘을 향한 춤의 약자로, 우리의 간증을 한국무용을 통해 풀어내고 우리의 몸짓이 예배가 된다는 의미를 담고 있습니다.
+    <br><br>
+    첫째, 하향은 '선교'하는 동아리입니다. 한동대 문화선교단체 MNT(Mission aNd Talent)에 소속되어 매년 겨울에 태국 선교를 떠나며, 그 땅에 춤으로 복음을 전합니다.
+    <br><br>
+    둘째, 하향은 '공연'하는 동아리입니다. 모든 사역에 최선의 모습으로 예배드리기 위해 일주일에 4~5번 하루에 2시간씩 모여 연습을 진행하고, 학교 내 수많은 행사들과 지역 교회, 축제 등에서 공연사역을 이어나갑니다.
+    <br><br>
+    셋째, 하향은 '기독교' 동아리입니다. 우리의 몸짓을 통해 하나님의 사랑, 십자가와 같은 가치들을 표현하며, 매주 함께하는 말씀 나눔 시간과 연습 전 기도를 통해 기쁨과 슬픔을 나누며 믿음으로 성장하는 것에 의의를 두고 있습니다.
+    <br><br>
+    사랑이 넘치는 동아리, 여기는 하향입니다-!
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

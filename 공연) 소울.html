@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/soul.png" alt="SOUL"></td>
+            <td colspan="2"><p class="title">소울</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 월요일 20시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@hgusoul7823" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/hgu_club_soul/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    소울은 예수님의 수어동아리로 ‘소리 없이 울리는’, ‘Sign Of Unlimited Love’의 뜻을 가진 이름으로 활동하는 한동대 유일의 수어 동아리입니다. <br><br>
+    소울은 1998년 농아인을 향한 하나님의 마음을 닮고자 하는 한동의 선배들이 포항제일교회 농아부에 출석하면서 시작하였습니다.
+    <br>현재는 수어를 사용하여 농아인분들에게 한글을 알려드리고, 농아인 자녀들에게 학업적 멘토가 되어 학업에 부족함이 없도록 도와줍니다.
+    <br>또한 지역아동센터에서의 수어 교육으로 아이들이 수어와 농아인에 대한 관심을 가지고, 보다 넓은 세상을 볼 수 있도록 가치를 전해줍니다. 뿐만 아니라 학교 내외적으로 수화공연, 수화제 활동을 통해 청인들에게 농인에 대해 알리며 농아인과 건청인을 잇는 다리 역할을 하기 위해 기도하고 노력하고 있습니다.
+    <br><br>
+    하나님께서는 농아인에게 눈으로 듣고 손으로 말하는 달란트를 주셨고, 건청인에게는 귀로 듣고 입으로 말하는 달란트를 주셨습니다. 서로 다를 뿐, 어느 것도 잘못된 달란트가 아닙니다. 소울은 서로의 달란트를 나누며 하나님의 사랑을 전하는 동아리입니다. 손짓 몸짓을 통해 하나님을 전하는 기쁨, 차별 없이 소외된 이들을 돌보시는 예수님의 동일한 사랑. 소울을 통해 느꼈던 감동을 여러분들과 함께 나누고 싶습니다.
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

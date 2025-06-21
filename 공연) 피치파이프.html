@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/pitchpipe.png" alt="피치파이프"></td>
+            <td colspan="2"><p class="title">피치파이프</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 월요일, 목요일</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@pitchpipehgu" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/pitchpipe_hgu/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    피치파이프란 아카펠라를 시작할 때 첫 음을 맞춰주는 절대 음을 내는 악기입니다. 저희 공동체의 구성원들이 절대 음에 맞춰 노래를 하듯이 저희의 삶도 하나님의 절대 기준을 따라 살아가자는 의미를 가지고 있습니다.<br><br>
+    피치파이프는 한동대학교의 개교 시기인 1995년부터 지금까지 학교의 공식적인 행사 참여는 물론, 각 지역의 여러 교회에서 아카펠라로 찬양하는 활동들을 이어오고 있습니다. 일주일에 2번 정기모임을 가지고 있으며, 매시간 예배로 시작하여 아카펠라 연습을 하는 순서로 진행하고 있습니다.
+    <br>아카펠라라는 방식으로 서로 다른 목소리가 하나의 아름다운 하모니를 내며 모든 구성원들이 연합하여 하나된 교회로 세워져 가는 것이 저희가 아카펠라를 통해 이루고자 하는 비전입니다.
+    <br>또 구성원들 간에 소통과 사랑을 중요하게 여기는 공동체이기 때문에 피치파이프 활동을 통해 하나님 안에서 하나된 공동체가 무엇인지 배울 수 있습니다.
+    <br>피치파이프는 하나님을 찬양하는 아카펠라 동아리입니다. 아카펠라를 통해 하나님을 찬양하길 기뻐하고 공동체 구성원들과 함께 행복한 추억을 만들어 가길 원하는 분들은 피치파이프로 오세요~!
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

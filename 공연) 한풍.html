@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/한풍.png" alt="한풍"></td>
+            <td colspan="2"><p class="title">한풍</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 화, 수, 금요일 2시간씩</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@%ED%95%9C%ED%92%8D-p6e" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/hanpoong.official/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    사물놀이를 통해 하나님을 찬양하는 동아리, 하나님의 군악대 ‘한풍’입니다. 저희는 ‘비파와 수금으로 여호와를 찬양할지어다(시편 150편 3절)’ 주제 말씀을 항상 생각하며 우리의 소리와 우리의 악기로 하나님을 찬양하는 동아리입니다.<br><br>
+    한풍의 대표 컨텐츠인 웃다리는 ‘요한복음 3장 16절’의 말씀으로 구성된 사설을 통해, 하나님의 영광과 존귀를 찬양하는 군악대로서 복음을 전하고자 합니다. 웃다리 외에도 열두발, 버나, 북춤, 장구놀이, 판굿 등 다양한 컨텐츠들과 함께 매년 정기 공연을 여는 공연 동아리입니다.
+    <br>또한, MNT 소속 단체로서 겨울방학에는 1년동안 연습했던 컨텐츠들을 가지고 태국으로 사역을 나갑니다. 
+    <br><br>
+    한국 전통 악기도로 주님을 찬양할 수 있다는 것이 얼마나 즐겁고 복된 일인지 저희뿐만 아니라 공연을 보는 모든 사람이 알고 함께 즐기길 원하는 마음으로 준비합니다.
+    <br>꽹과리, 북, 장구, 징 그리고 상모 돌리기 파트로 나눠집니다.
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

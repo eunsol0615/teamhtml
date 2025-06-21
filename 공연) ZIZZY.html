@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/zizzy.png" alt="ZIZZY"></td>
+            <td colspan="2"><p class="title">ZIZZY</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 월요일 19시, 목요일 22시, 일요일 21시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@ZizzyHandong" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/zizzy_hgu/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    Zizzy는 이름처럼 화려한 무대를 통해 한동인들을 즐겁게 해주는 사람들이 모인 곳입니다. 춤에 관심이 있거나 수많은 한동인의 앞에서 뜨거운 환호를 즐기고 싶은 한동인이라면 그대는 지원 자격이 충분합니다! <br><br>
+    Zizzy는 1995년, 한동대학교 설립과 함께 창설되어 현재까지 활동 중입니다. 유일하게 K-pop 장르를 다루고 있으며, 다양한 장르를 통해 다채로운 경험이 가능한 동아리입니다. 필수학기는 4학기로 학기별로 스트릿 공연과 Zizzy 자체 공연 이외에도 축제, 한스트, 학부합창대회 등 각종 행사에 참여하고 있습니다. 
+    <br><br>
+    K-pop과 함께 다양한 장르의 춤을 추고 싶으신가요? 재능 있는 분은 물론, 춤에 대한 열정으로 더 성장하고 싶은 분, 넘치는 끼로 자신을 뽐내고 싶은 분 모두 환영합니다!
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

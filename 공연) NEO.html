@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/neo.png" alt="NEO"></td>
+            <td colspan="2"><p class="title">NEO</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 3학기</td>
+            <td width="25%">정모시간: 월요일 19시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/channel/UCG6ggeKb3lIns6TTmbEd3uA" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/handong_neo?igshid=v2p2fulli62t" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    We NEO, We are NEO<br><br>
+    저희는 한동대학교 작사작곡 동아리 NEO입니다.
+    <br>
+    NEO는 2001년에 창설되어 매 해 정기공연과 축제 공연, NEO카페를 통해 저희 만의 이야기를 들려드리고 있습니다. 그러나 NEO의 작사작곡은 공연을 위해 특별한 때에만 이루어지는 것이 아닙니다. 일상 중 눈앞의 소재에 번뜩이는 멜로디, 차오르는 마음은 당신의 순간들을 음악으로 만들어줍니다.
+    <br><br>
+    도란도란 모여 회의부터 시작해서 서로의 일상과 요즘 쓰는 곡들을 나눕니다. 작사도 작곡도 안 되는 것 같을 때, 동기나 선배의 멜로디 한 구절에 기억하지 못했던 추억들이 떠오르기도 한답니다. 학기를 거듭할수록 다루는 악기와 가진 음색, 음악색깔이 모두 다른 NEO는 서로에게 좋은 음악친구가 되어갑니다. 꼭 정기모임 때가 아니어도 기타 한 대, 젖지 않은 바닥만 있다면 파티원을 구하는 것은 어려운 일도 아니랍니다.
+    <br><br>
+    남들이 다 부르는 곡을 따라 부르는 게 지겹지는 않으신가요? 사랑하는 사람에게 세레나데를 선물하고 싶지는 않나요? 혹, 그리운 사람과의 추억만 떠올리면 생각나는 문구라도? 
+    <br>
+    NEO에서 대학 캠퍼스를 누리는 20대의 생기 넘치는 당신을 음악으로 남겨보세요.
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

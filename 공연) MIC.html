@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/MIC.png" alt="MIC"></td>
+            <td colspan="2"><p class="title">Motion In Christ</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 목요일 20시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 지원영상 + 면접</td>
+            <td>연습시간: ★★★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/user/MotionInChrist" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/motioninchrist_official/?hl=ko" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    MIC는 Motion In Christ의 약자로 한동대 학생들로 구성된 춤을 통해 하나님께 영광 돌리는 청소년 사역단체입니다. 주로 힙합댄스를 기반으로 활동하며 힙합뿐만 아니라 왁킹, 걸스힙합, 락킹, 하우스, 크럼프, 댄스홀, 얼반 등 다양한 장르를 접할 수 있는 기회가 있습니다.<br><br>
+    MIC는 1996년에 창단되어 현재까지 이어져 오고 있으며, 학기 중 축제 및 스트릿 공연을 진행하고 컨텐츠를 자체 제작하여 서울, 경기, 강원, 경북, 대구, 부산 등 전국적으로 사역하고 있습니다. 또한 MIC는 MNT(mission and talent) 소속단체로서 겨울방학에는 태국으로 문화사역을 이어나갑니다.
+    <br>MIC는 필수 4학기제로 운영되며, 매주 정기 모임을 가져 예배와 연습을 진행하고 다양한 공동체활동을 진행합니다.
+    <br>혹시 다양한 장르의 춤을 통해 사역하는 것이 궁금하신 분들이 계신가요? 춤을 한번도 춰보지 않았어도 끈기와 열정을 가지고 사역에 동참해 주실 동역자를 찾습니다. 주님안에 하나가 되어 저희의 가장 아름다울 청춘의 시간을 매우 값지게 보낼 수 있기를 원합니다!
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

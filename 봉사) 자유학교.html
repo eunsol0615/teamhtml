@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>봉사분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/freedom.png" alt="청소년 자유학교"></td>
+            <td colspan="2"><p class="title">청소년 자유학교</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 없음</td>
+            <td width="25%">정모시간: 3~6주차 월, 수요일 22시 7~주차 목요일 22시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>모임시간: ★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.instagram.com/jayu_school_recruiting/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    지난 2001년 개교한 청소년 자유학교는 저마다의 이유로 학업을 중단한 포항 지역의 청소년들이 검정고시를 통과할 수 있도록 교육하는 한동대학교의 봉사 동아리이자 대안학교입니다. <br><br>
+    ‘단 한 명의 학생이라도 있다면 개교하고, 단 한 명의 학생만 남았더라도 폐교하지 않는’ 청소년 자유학교는 꿈을 이루고 싶은 청소년 누구나에게 열려 있는 학교입니다.<br><br>
+    청소년 자유학교의 교사진은 전원 한동대학교의 학생들로 구성되어 있으며, 한동의 교수님들과 각계각층의 봉사자분들로 이루어진 선생님들과 함께 학교를 운영하고 있습니다. <br><br>
+    자유학교에서는 검정고시 합격을 위한 교과목 수업은 물론, 음악반, 소풍, 체육대회, MT 등 교과서 밖의 지식과 가치를 전할 수 있는 다양한 수업과 행사들이 운영됩니다.<br><Br>
+    이처럼 선생님들은 아이들이 스스로 자신의 삶을 바꾸고 성장하며, 자신이 가진 최선의 가치를 발견할 수 있도록 다양한 형태와 방법으로 아이들을 교육하고 있습니다.<br><br>
+    청소년 자유학교는 항상 새로운 선생님들을 기다리고 있습니다. 아이들의 무한한 가능성에 날개를 달아주세요!
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

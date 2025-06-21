@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>공연분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/응원단.png" alt="한동대학교 응원단"></td>
+            <td colspan="2"><p class="title">한동대학교 응원단</p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 4학기</td>
+            <td width="25%">정모시간: 월, 화, 수요일 21시</td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 + 면접</td>
+            <td>연습시간: ★★★</td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        <a href="https://www.youtube.com/@HGUCheerleadingclub" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/youtube.png" style="height: 28px;"></a>
+        <a href="https://www.instagram.com/cheer4hgu_official/" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+    저희는 한동대학교와 포항시를 넘어 대한민국을 응원하는 한동대학교 응원단입니다. 저희 한동대학교 응원단은 ‘액션 치어리딩’으로 매년 사랑의마라톤, 한동컵 등 학교 주요 행사의 공연을 섬기며 다양한 자리에서 한동인들을 응원하고 있습니다. <br><br>
+    또한, 포항 지역에 대한 지속적인 관심을 가지고 포항지역사회를 함께 응원하고 있습니다. ‘그대에게’, ‘리턴즈’와 같은 곡으로 무대를 구성하여 웅장하고 활기찬 무대를 연출합니다. ‘나는 언제나 그대 곁에 있겠어요’ 등과 같은 가사를 통해 지치고 힘든 순간이 찾아올지라도 항상 한동인들의 마음 속에 함께하겠다는 뜻을 담고 있습니다.
+    <br>한동대학교 응원단은 외모가 출중하고 실력이 선천적으로 뛰어나야 하지 않습니다. 저희는 오직 ‘개인의 열정과 노력’만을 고려하여 응원 단원을 구성하고 있습니다.
+    <br>이러한 개인이 모여 사랑과 섬김의 자세로 서로 협력하며 무대를 만들어가고 있으며, 궁극적으로 ‘한동대학교 응원단’이라는 하나의 공동체를 완성하고자 하는 동아리입니다. 하나의 공연을 선보이는 것을 뛰어넘어, 당신의 삶을 응원하는 누군가가 존재한다는 것을 전달하고자 합니다. 한동대학교 응원단과 함께 한동인들을 응원하고 힘을 얻으셨으면 좋겠습니다.
+    <br>활동을 통해 새로운 방법으로 체력, 협동심 등을 기를 수 있으며 춤, 외모, 키 상관없이 누구나 즐거운 마음으로 함께할 수 있는 동아리입니다.
+        <br>
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>
