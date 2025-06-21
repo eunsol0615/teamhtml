@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>전시분과</title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"><img src="./logos/vam.png" alt="VAM"></td>
+            <td colspan="2"><p class="title">VAM </p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 없음 </td>
+            <td width="25%">정모시간: 유동적 </td>
+        </tr>
+        <tr>
+            <td>연습시간: ★★</td>
+            <td>모집기간: ~3월 17일 </td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+          <a href="https://www.instagram.com/visual_art_maniacs?utm_source=ig_web_button_share_sheet&igsh=YnRkMmppNHN1Z3Nu" target="_blank" style="float: right; display: flex; align-items: center;">
+            <img src="./logos/instagram.png" style="height: 28px;"></a>
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+한동 유일의 사진동아리로 1995년부터 활동을 시작하였습니다. 주 1회 정모시간에 사진 스터디 및 정보 공유의 시간을 가집니다. 그 외에도 함께 출사도 나가고, 포항의 복지기관에 찾아가 사진을 찍어드리는 사회봉사활동을 통해 포항주민들을 섬기며 사진을 통해 사랑을 전하고 있습니다. 
+
+<br>
+<br>
+매 학기 배머들이 직접 정기 전시회를 열어 사진을 통한 생각을 공유하고, 스튜디오를 여는 등 학우들의 문화생활에 대한 갈증을 해소해드리고자 노력하고 있습니다. 
+
+<br>
+<br>
+저희 동아리는 사진과 관련된 활동을 정기적으로 함께하기에, 동아리원들과의 관계가 정말 친밀합니다. 그렇기에 어렵게만 생각되는 사진을 재미있고, 즐겁게 배우고 찍으실 수 있을 것입니다. 
+
+<br>
+<br>
+Visual art maniacs의 줄임말입니다 
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>

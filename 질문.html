@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=SUIT:wght@600&display=swap');
+
+      .예 {
+        width: 140px;
+        height: 60px;
+        background-color: #00397e;
+        color: white;
+        font-family: 'SUIT', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+      }
+
+      .예:hover {
+        background-color: #1a5fe3;
+        transform: translateY(-2px);
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f6fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="예">예</div>
+
+    <script>
+      const seat = localStorage.getItem("selectedSeat");
+      console.log("선택된 좌석:", seat);
+
+      if (!seat) {
+        alert("좌석이 선택되지 않았습니다. 처음으로 돌아갑니다.");
+        window.location.href = "a구역.html";
+      }
+
+      document.querySelector(".예").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        fetch("https://test2-server-5ags.onrender.com/reserve", {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ seat })
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            alert("예매 완료!");
+            window.location.href = "map.html";
+          } else {
+            alert("로그인이 필요합니다.");
+          }
+        })
+        .catch(err => {
+          alert("서버 오류 또는 네트워크 실패");
+          console.error(err);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>종교분과 </title>
+    <style>
+        body {background-color: white; font-family: 'PyeojinGothic-Bold'; font-weight: 700; font-style: normal; color: #00397e;}
+    /* navigation bar를 위한 CSS입니다 */
+        .topnav {
+            overflow: hidden;
+            background-color: #00397e;
+            margin-left: 7%;
+            margin-right: 7%;
+            border-radius: 20px;}
+        .topnav a {
+            float: left;
+            display: flex;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            height: 40px;}
+        .topnav a:hover {
+            background-color: #5d71b2;
+            color:  white;
+            transition: 0.3s ease;}
+
+    /* 로고를 위한 CSS입니다 */
+        table {border-collapse: collapse;}
+        td img {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    /* 정보/이름/분단제목을 위한 CSS입니다 */
+        p.info {border-style: none; width: 85%; overflow: visible; margin-left: 8%;}
+        p.title {color: #00397e; text-align: left; font-size: 300%;}
+        h1 {text-align: center; color: #00397e; font-family: 'Segoe UI';}
+    </style>
+</head>
+
+<body>
+<!--로고부분입니다-->
+    <table width="70%" align="center">
+        <tr>
+            <td rowspan="4" style="width: 50%; height: 270px;" align="center"></td>
+            <td colspan="2"><p class="title">B2B (Back to the Bible) </p></td>
+        </tr>
+        <tr>
+            <td width="25%">필수학기: 없음 </td>
+            <td width="25%">정모시간: 유동적 </td>
+        </tr>
+        <tr>
+            <td>지원방법: 구글폼 </td>
+            <td>모집기간: 상시 모집 </td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td></td>
+        </tr>
+    </table><br>
+
+<!--navigation bar입니다-->
+    <div class="topnav">
+        <a href="#info">정보</a>
+        <a href="#schedule">일정</a>
+        <a href="#review">후기보기</a>
+        <a href="./form.html" target="_blank">후기쓰기</a>
+        
+    </div>
+
+<!--정보 부분입니다-->
+<h1 id="info">Information</h1>
+<p class="info">
+한동대의 유일한 성경암송 동아리 
+
+<br><br>하나님의 방법으로 세상을 변화시키자는 한동대학교의 비전을 “어떻게” 이룰 수 있을까요? <br>그 답으로 B2B는 하나님의 말씀이라는 가장 본질적이고 모두가 공유해야 할 핵심 가치를 제시합니다. 구체적인 방법은, 꾸준한 암송과 말씀을 살아내는 훈련입니다. 
+
+<br><br>한동의 청년들을 복음의 증인으로 준비시킵니다. 
+<br>한 학기 동안 성경의 핵심 주제 11가지(성부, 성자, 성령, 하나님의 뜻, 기도, 구원 등)에 대한 말씀을 듣고, 암송합니다. 듣고 확신하는 가운데 새긴 하나님의 말씀은, 한동의 청년들을 어디서든지 복음을 담대히 전할 수 있는 복음의 증인으로 준비시킵니다. 
+
+<br><br>B2B는, 성령님과 동행하는 신앙으로 자라게 합니다. 
+<br>성령님께서는 마음에 새겨진 말씀을, “삶 가운데 Pop Up” 시키십니다. 이를 통해, 날마다 우리와 동행하시는 성령님을 체험케 됩니다. 
+
+<br><br>B2B는, 말씀을 “살아내는” 신앙으로 변화시킵니다. 
+<br>삶 가운데 Pop Up 되는 말씀은, 우리로 말씀을 살아내는 예수 그리스도의 제자로 변화시킵니다. 
+
+<br><br>하나님의 말씀이 우리 안에 역사하기 시작할 때, 하나님께서 우리 삶을 통해서, "Why not change the world"를 이루실 것입니다. 
+</p><br>
+
+<!--캘린더 부분입니다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="schedule">Calendar</h1><br>
+    <div style="text-align: center;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=62516687caef5b33e3a8bc107a5f7eeb8c068d70283c0a5a8719f8dd9399fd6b%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="85%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div><br>
+
+<!--리뷰 부분입니다다-->
+<hr width="85%" color="#00397e"><br>
+<h1 id="review">Reviews</h1>
+    <p class="info">
+        <iframe src="./reviews.html" width="100%" height="700" style="border:none;" ></iframe>
+    </p>
+
+</body>
+</html>
