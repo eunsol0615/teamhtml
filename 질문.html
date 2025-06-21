@@ -52,7 +52,7 @@
       document.querySelector(".예").addEventListener("click", function (e) {
         e.preventDefault();
 
-        fetch("https://test2-server-5ags.onrender.com/reserve", {
+        fetch("https://test2-server-5ags.onrender.com/login", {
           method: "POST",
           credentials: "include",
           headers: {
@@ -64,7 +64,7 @@
         .then(data => {
           if (data.success) {
             alert("예매 완료!");
-            window.location.href = "map.html";
+            window.location.href = "login.html";
           } else {
             alert("로그인이 필요합니다.");
           }
